@@ -9,18 +9,17 @@ import SwiftUI
 
 struct CharacterRowView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 12) {
+        VStack( spacing: 12) {
             AsyncImage(url:
                 URL(string: "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg")!
             ) { image in
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .scaledToFit()
                     .clipped()
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 300)
             .cornerRadius(12)
 
             Text("This is the Title")
