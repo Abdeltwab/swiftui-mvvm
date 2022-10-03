@@ -19,6 +19,7 @@
 		4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944B28EB7CB000CD5758 /* Swinject */; };
 		4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945328EB851400CD5758 /* CharacterRowView.swift */; };
 		4F92945628EB86B900CD5758 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945528EB86B900CD5758 /* CharacterListView.swift */; };
+		4F92945828EB8F8200CD5758 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945728EB8F8200CD5758 /* CharacterListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4F92944828EB7C3E00CD5758 /* DIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 		4F92945328EB851400CD5758 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
 		4F92945528EB86B900CD5758 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		4F92945728EB8F8200CD5758 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		4F92945028EB7ED700CD5758 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4F92945728EB8F8200CD5758 /* CharacterListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */,
 				4F92945628EB86B900CD5758 /* CharacterListView.swift in Sources */,
 				4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */,
+				4F92945828EB8F8200CD5758 /* CharacterListViewModel.swift in Sources */,
 				4F92944928EB7C3E00CD5758 /* DIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
