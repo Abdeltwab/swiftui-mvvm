@@ -17,6 +17,7 @@
 		4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944528EB556300CD5758 /* NetworkingKit */; };
 		4F92944928EB7C3E00CD5758 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92944828EB7C3E00CD5758 /* DIHelper.swift */; };
 		4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944B28EB7CB000CD5758 /* Swinject */; };
+		4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945328EB851400CD5758 /* CharacterRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4F92943428EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F92944328EB528000CD5758 /* NetworkingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkingKit; path = ../NetworkingKit; sourceTree = "<group>"; };
 		4F92944828EB7C3E00CD5758 /* DIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
+		4F92945328EB851400CD5758 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		4F92941628EB506B00CD5758 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				4F92944D28EB7E1700CD5758 /* Modules */,
 				4F92944728EB7C2300CD5758 /* Helpers */,
 				4F92941728EB506B00CD5758 /* swiftui_mvvmApp.swift */,
 				4F92941928EB506B00CD5758 /* ContentView.swift */,
@@ -150,6 +153,38 @@
 				4F92944828EB7C3E00CD5758 /* DIHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4F92944D28EB7E1700CD5758 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4F92944E28EB7E2500CD5758 /* CharacterList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4F92944E28EB7E2500CD5758 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				4F92945028EB7ED700CD5758 /* ViewModel */,
+				4F92944F28EB7ED000CD5758 /* Views */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		4F92944F28EB7ED000CD5758 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F92945328EB851400CD5758 /* CharacterRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F92945028EB7ED700CD5758 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92941A28EB506B00CD5758 /* ContentView.swift in Sources */,
+				4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */,
 				4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */,
 				4F92944928EB7C3E00CD5758 /* DIHelper.swift in Sources */,
 			);
