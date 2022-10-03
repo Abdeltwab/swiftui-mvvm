@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Endpoint {
+protocol APIEndPoint {
     var defaultURL: URL { get}
     var scheme: String { get }
     var host: String { get }
@@ -19,7 +19,7 @@ protocol Endpoint {
 
 }
 
-extension Endpoint {
+extension APIEndPoint {
     var defaultURL: URL {
        URL(string:"https://breakingbadapi.com/api")!
     }

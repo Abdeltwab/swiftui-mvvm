@@ -9,7 +9,7 @@ import Foundation
 
 protocol APIClient {
     func sendRequest<T: Decodable>(
-        endpoint: Endpoint,
+        endpoint: APIEndPoint,
         responseModel: T.Type
     ) async -> Result<T, APIError>
 }
@@ -18,9 +18,9 @@ protocol APIClient {
 
 extension APIClient {
     func sendRequest<T: Decodable>(
-        endpoint: Endpoint,
+        endpoint: APIEndPoint,
         responseModel: T.Type
-    ) async -> Result<T, RequestError> {
+    ) async -> Result<T, APIError> {
         var request = URLRequest(url: endpoint.url)
         request.httpMethod = endpoint.method.rawValue
         do {
