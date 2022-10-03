@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+
 struct CharacterListView: View {
+    @ObservedObject private var viewModel = Resolver.shared.resolve(CharacterListViewModel.self)
+
     var body: some View {
         List {
             ForEach(1 ..< 5) { _ in
