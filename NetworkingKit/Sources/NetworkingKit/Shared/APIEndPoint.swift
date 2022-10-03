@@ -41,6 +41,20 @@ extension APIEndPoint {
         
         return components.url ?? defaultURL
     }
+    
+    
+    var method: RequestMethod {
+        .get
+    }
+    
+    var body: [String: String]? {
+        [:]
+    }
+
+    
+    var queryItems: [URLQueryItem] {
+        []
+    }
 }
 
 enum RequestMethod: String {
