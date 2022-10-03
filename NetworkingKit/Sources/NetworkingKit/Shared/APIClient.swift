@@ -50,7 +50,8 @@ extension APIClient {
                         .mapError { _ in
                             APIError.unknown
                         }
-                        .map { $0 }
+                        
+                        .map {$0}
                         .eraseToAnyPublisher()
                 default:
                     return Fail(error: APIError.unknown)

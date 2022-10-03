@@ -14,9 +14,6 @@ protocol APIEndPoint {
     var path: String { get }
     var url : URL { get}
     var method: RequestMethod { get }
-    var body: [String: String]? { get }
-    var queryItems: [URLQueryItem] { get}
-
 }
 
 extension APIEndPoint {
@@ -36,9 +33,7 @@ extension APIEndPoint {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
-        components.path = path
-        components.queryItems = queryItems
-        
+        components.path = path        
         return components.url ?? defaultURL
     }
     
@@ -46,15 +41,7 @@ extension APIEndPoint {
     var method: RequestMethod {
         .get
     }
-    
-    var body: [String: String]? {
-        [:]
-    }
 
-    
-    var queryItems: [URLQueryItem] {
-        []
-    }
 }
 
 enum RequestMethod: String {

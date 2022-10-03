@@ -16,7 +16,7 @@ extension CharactersEndPoint: APIEndPoint {
     var path: String {
         switch self {
         case .characters:
-            return "/characters"
+            return "/api/characters"
         }
     }
 

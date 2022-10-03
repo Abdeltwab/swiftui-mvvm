@@ -10,17 +10,17 @@ import Foundation
 public typealias CharacterList = [Character]
 
 public struct Character: Codable {
-    let id: Int
-    let name: String
-    let birthday: String
-    let occupation: [String]
-    let img: String
-    let status: Status
-    let nickname: String
-    let appearance: [Int]
-    let portrayed: String
-    let category: Category
-    let betterCallSaulAppearance: [Int]
+    public let id: Int
+    public let name: String
+    public let birthday: String
+    public let occupation: [String]
+    public let img: String
+    public let status: Status
+    public let nickname: String
+    public let appearance: [Int]
+    public let portrayed: String
+    public let category: Category
+    public let betterCallSaulAppearance: [Int]
 
     enum CodingKeys: String, CodingKey {
         case name, birthday,
@@ -33,13 +33,13 @@ public struct Character: Codable {
     }
 }
 
-enum Category: String, Codable {
+public enum Category: String, Codable {
     case betterCallSaul = "Better Call Saul"
     case breakingBad = "Breaking Bad"
     case breakingBadBetterCallSaul = "Breaking Bad, Better Call Saul"
 }
 
-enum Status: String, Codable {
+public enum Status: String, Codable {
     case alive = "Alive"
     case deceased = "Deceased"
     case presumedDead = "Presumed dead"
