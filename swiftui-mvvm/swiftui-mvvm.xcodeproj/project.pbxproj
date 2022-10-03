@@ -14,6 +14,7 @@
 		4F92942928EB506D00CD5758 /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92942828EB506D00CD5758 /* swiftui_mvvmTests.swift */; };
 		4F92943328EB506D00CD5758 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92943228EB506D00CD5758 /* swiftui_mvvmUITests.swift */; };
 		4F92943528EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92943428EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift */; };
+		4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944528EB556300CD5758 /* NetworkingKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +82,7 @@
 				4F92942728EB506D00CD5758 /* swiftui-mvvmTests */,
 				4F92943128EB506D00CD5758 /* swiftui-mvvmUITests */,
 				4F92941528EB506B00CD5758 /* Products */,
+				4F92944428EB556300CD5758 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +132,13 @@
 			path = "swiftui-mvvmUITests";
 			sourceTree = "<group>";
 		};
+		4F92944428EB556300CD5758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +155,9 @@
 			dependencies = (
 			);
 			name = "swiftui-mvvm";
+			packageProductDependencies = (
+				4F92944528EB556300CD5758 /* NetworkingKit */,
+			);
 			productName = "swiftui-mvvm";
 			productReference = 4F92941428EB506B00CD5758 /* swiftui-mvvm.app */;
 			productType = "com.apple.product-type.application";
@@ -347,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -585,6 +598,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F92944528EB556300CD5758 /* NetworkingKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F92940C28EB506B00CD5758 /* Project object */;
 }

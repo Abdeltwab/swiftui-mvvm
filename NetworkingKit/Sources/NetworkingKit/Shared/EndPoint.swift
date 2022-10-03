@@ -5,6 +5,8 @@
 //  Created by Abdeltawab Mohamed on 03/10/2022.
 //
 
+import Foundation
+
 protocol Endpoint {
     var defaultURL: URL { get}
     var scheme: String { get }
