@@ -44,6 +44,7 @@
 		4F92942E28EB506D00CD5758 /* swiftui-mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92943228EB506D00CD5758 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		4F92943428EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F92944328EB528000CD5758 /* NetworkingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkingKit; path = ../NetworkingKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		4F92940B28EB506B00CD5758 = {
 			isa = PBXGroup;
 			children = (
+				4F92944328EB528000CD5758 /* NetworkingKit */,
 				4F92941628EB506B00CD5758 /* swiftui-mvvm */,
 				4F92942728EB506D00CD5758 /* swiftui-mvvmTests */,
 				4F92943128EB506D00CD5758 /* swiftui-mvvmUITests */,
