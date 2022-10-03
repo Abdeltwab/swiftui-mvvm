@@ -5,6 +5,6 @@
 //  Created by Abdeltawab Mohamed on 03/10/2022.
 //
 
-enum APIError: Error {
+public enum APIError: Error {
     case unknown
 }

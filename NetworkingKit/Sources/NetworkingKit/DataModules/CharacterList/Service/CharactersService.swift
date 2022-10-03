@@ -8,12 +8,12 @@
 import Combine
 import Foundation
 
-protocol CharactersServiceProtocol {
+public protocol CharactersServiceProtocol {
     func fetchCharacters() -> AnyPublisher<CharacterList, APIError>
 }
 
-struct CharactersService: APIClient, CharactersServiceProtocol {
-    func fetchCharacters() -> AnyPublisher<CharacterList, APIError> {
+public struct CharactersService: APIClient, CharactersServiceProtocol {
+    public func fetchCharacters() -> AnyPublisher<CharacterList, APIError> {
         return
             sendRequest(endpoint: CharactersEndPoint.characters,
                         responseModel: CharacterList.self)
