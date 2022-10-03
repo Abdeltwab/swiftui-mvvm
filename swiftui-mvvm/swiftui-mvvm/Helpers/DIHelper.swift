@@ -5,7 +5,7 @@
 //  Created by Abdeltawab Mohamed on 03/10/2022.
 //
 
-import Foundation
+import NetworkingKit
 import Swinject
 
 @propertyWrapper
@@ -31,6 +31,6 @@ class Resolver {
 
 private func buildContainer() -> Container {
     let container = Container()
-
+    
     return container
 }

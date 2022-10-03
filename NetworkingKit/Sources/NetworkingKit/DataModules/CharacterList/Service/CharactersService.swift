@@ -13,7 +13,7 @@ public protocol CharactersServiceProtocol {
 }
 
 public struct CharactersService: APIClient, CharactersServiceProtocol {
-    public init(){}
+    public init() {}
     public func fetchCharacters() -> AnyPublisher<CharacterList, APIError> {
         return
             sendRequest(endpoint: CharactersEndPoint.characters,
