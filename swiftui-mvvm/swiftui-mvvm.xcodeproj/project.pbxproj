@@ -15,6 +15,8 @@
 		4F92943328EB506D00CD5758 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92943228EB506D00CD5758 /* swiftui_mvvmUITests.swift */; };
 		4F92943528EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92943428EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift */; };
 		4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944528EB556300CD5758 /* NetworkingKit */; };
+		4F92944928EB7C3E00CD5758 /* DIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92944828EB7C3E00CD5758 /* DIHelper.swift */; };
+		4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944B28EB7CB000CD5758 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		4F92943228EB506D00CD5758 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		4F92943428EB506D00CD5758 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4F92944328EB528000CD5758 /* NetworkingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkingKit; path = ../NetworkingKit; sourceTree = "<group>"; };
+		4F92944828EB7C3E00CD5758 /* DIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */,
+				4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		4F92941628EB506B00CD5758 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				4F92944728EB7C2300CD5758 /* Helpers */,
 				4F92941728EB506B00CD5758 /* swiftui_mvvmApp.swift */,
 				4F92941928EB506B00CD5758 /* ContentView.swift */,
 				4F92941B28EB506D00CD5758 /* Assets.xcassets */,
@@ -139,6 +144,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F92944728EB7C2300CD5758 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4F92944828EB7C3E00CD5758 /* DIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +170,7 @@
 			name = "swiftui-mvvm";
 			packageProductDependencies = (
 				4F92944528EB556300CD5758 /* NetworkingKit */,
+				4F92944B28EB7CB000CD5758 /* Swinject */,
 			);
 			productName = "swiftui-mvvm";
 			productReference = 4F92941428EB506B00CD5758 /* swiftui-mvvm.app */;
@@ -230,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 4F92940B28EB506B00CD5758;
+			packageReferences = (
+				4F92944A28EB7CB000CD5758 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 4F92941528EB506B00CD5758 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +291,7 @@
 			files = (
 				4F92941A28EB506B00CD5758 /* ContentView.swift in Sources */,
 				4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */,
+				4F92944928EB7C3E00CD5758 /* DIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,10 +617,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		4F92944A28EB7CB000CD5758 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4F92944528EB556300CD5758 /* NetworkingKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkingKit;
+		};
+		4F92944B28EB7CB000CD5758 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F92944A28EB7CB000CD5758 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
