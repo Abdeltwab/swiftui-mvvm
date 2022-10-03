@@ -11,7 +11,7 @@ protocol APIClient {
     func sendRequest<T: Decodable>(
         endpoint: Endpoint,
         responseModel: T.Type
-    ) async -> Result<T, RequestError>
+    ) async -> Result<T, APIError>
 }
 
 // TODO: make more robust
