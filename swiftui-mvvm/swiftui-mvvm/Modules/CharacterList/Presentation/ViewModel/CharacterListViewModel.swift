@@ -14,6 +14,14 @@ class CharacterListViewModel {
 
     private var charactersResult: CharacterList = []
     private var cancellables: Set<AnyCancellable> = []
+    private let fetchCharactersUseCase : FetchCharacters
+    
+    
+    init(fetchCharacters:FetchCharacters) {
+        fetchCharactersUseCase = fetchCharacters
+    }
+}
 
+private extension CharacterListViewModel {
     
 }

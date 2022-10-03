@@ -31,6 +31,25 @@ class Resolver {
 
 private func buildContainer() -> Container {
     let container = Container()
-    
+    container.register(CharactersService.self) { _ in
+        CharactersService()
+    }
+
+    container.register(FetchCharacters.self) { resolver in
+        FetchCharacters(
+            service: resolver.resolve(
+                CharactersService.self) ??
+                CharactersService()
+        )
+    }
+
+    //    container // FetchCharacters
+
+    container.register(CharacterListViewModel.self) { resolver in
+        CharacterListViewModel(
+            fetchCharacters:resolver.resolve(
+                FetchCharacters.self)!
+        )
+    }
     return container
 }
