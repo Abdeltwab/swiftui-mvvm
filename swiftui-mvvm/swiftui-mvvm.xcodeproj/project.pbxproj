@@ -22,6 +22,7 @@
 		4F92945828EB8F8200CD5758 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945728EB8F8200CD5758 /* CharacterListViewModel.swift */; };
 		4F92945D28EB98EB00CD5758 /* FetchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */; };
 		4F92946128EB9ECB00CD5758 /* CharacterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */; };
+		4F92946428EBC5E100CD5758 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F92946328EBC5E000CD5758 /* Characters.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4F92945728EB8F8200CD5758 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacters.swift; sourceTree = "<group>"; };
 		4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUIModel.swift; sourceTree = "<group>"; };
+		4F92946328EBC5E000CD5758 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		4F92942728EB506D00CD5758 /* swiftui-mvvmTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F92946228EBC42F00CD5758 /* Mocks */,
 				4F92942828EB506D00CD5758 /* swiftui_mvvmTests.swift */,
 			);
 			path = "swiftui-mvvmTests";
@@ -229,6 +232,14 @@
 				4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4F92946228EBC42F00CD5758 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4F92946328EBC5E000CD5758 /* Characters.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F92946428EBC5E100CD5758 /* Characters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
