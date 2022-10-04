@@ -23,6 +23,7 @@
 		4F92945D28EB98EB00CD5758 /* FetchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */; };
 		4F92946128EB9ECB00CD5758 /* CharacterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */; };
 		4F92946428EBC5E100CD5758 /* Characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F92946328EBC5E000CD5758 /* Characters.json */; };
+		4FDD1EC528EC33EB001B95DF /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD1EC428EC33EB001B95DF /* CharacterDetailsViewModel.swift */; };
 		4FF8EE6628EC09B600DE5136 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF8EE6528EC09B600DE5136 /* CharacterDetailsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacters.swift; sourceTree = "<group>"; };
 		4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUIModel.swift; sourceTree = "<group>"; };
 		4F92946328EBC5E000CD5758 /* Characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Characters.json; sourceTree = "<group>"; };
+		4FDD1EC428EC33EB001B95DF /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		4FF8EE6528EC09B600DE5136 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +275,7 @@
 		4FF8EE6428EC05B200DE5136 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4FDD1EC428EC33EB001B95DF /* CharacterDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				4F92941A28EB506B00CD5758 /* ContentView.swift in Sources */,
 				4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */,
 				4F92945D28EB98EB00CD5758 /* FetchCharacters.swift in Sources */,
+				4FDD1EC528EC33EB001B95DF /* CharacterDetailsViewModel.swift in Sources */,
 				4F92945628EB86B900CD5758 /* CharacterListView.swift in Sources */,
 				4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */,
 				4F92946128EB9ECB00CD5758 /* CharacterUIModel.swift in Sources */,

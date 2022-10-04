@@ -10,11 +10,17 @@ import SwiftUI
 
 struct CharacterListView: View {
     @ObservedObject private var viewModel = Resolver.shared.resolve(CharacterListViewModel.self)
-
+    
     var body: some View {
         NavigationView {
-            List($viewModel.filteredList) {
-                CharacterRowView($0.wrappedValue)
+            List($viewModel.filteredList) { item in
+                NavigationLink {
+                    CharacterDetailsView(
+                        viewModel: CharacterDetailsViewModel(
+                            character: item.wrappedValue))
+                } label: {
+                    CharacterRowView(item.wrappedValue)
+                }
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Breaking Bad")

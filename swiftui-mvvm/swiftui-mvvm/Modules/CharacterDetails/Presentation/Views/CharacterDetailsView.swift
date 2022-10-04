@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CharacterDetailsView: View {
+    @ObservedObject var viewModel: CharacterDetailsViewModel
+
+    
     var body: some View {
         VStack {
             Text("Ttile")
@@ -56,8 +59,8 @@ extension CharacterDetailsView {
     }
     
 }
-struct CharacterDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterDetailsView()
-    }
-}
+//struct CharacterDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterDetailsView()
+//    }
+//}

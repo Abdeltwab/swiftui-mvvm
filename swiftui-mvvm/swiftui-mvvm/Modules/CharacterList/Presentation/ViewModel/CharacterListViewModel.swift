@@ -11,6 +11,7 @@ import Foundation
 class CharacterListViewModel: ObservableObject {
     @Published var filteredList: [CharacterUIModel] = []
     @Published var searchText = ""
+    //@Published var searchText = ""
 
     @Published private var charactersList: [CharacterUIModel] = []
     private var cancellables: Set<AnyCancellable> = []

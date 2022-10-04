@@ -31,6 +31,7 @@ class Resolver {
 
 private func buildContainer() -> Container {
     let container = Container()
+    
     container.register(CharactersService.self) { _ in
         CharactersService()
     }
@@ -49,5 +50,10 @@ private func buildContainer() -> Container {
                 FetchCharacters.self)!
         )
     }
+    
+//    container.register(CharacterDetailsViewModel.self) { resolver in
+//        CharacterDetailsViewModel(character: <#T##CharacterUIModel#>)
+//    }
+    
     return container
 }
