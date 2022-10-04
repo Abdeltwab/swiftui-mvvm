@@ -4,18 +4,21 @@
 //
 //  Created by Abdeltawab Mohamed on 04/10/2022.
 //
-
+//https://felarmir.com/post/14_clean_mvvm/
 import SwiftUI
 
 struct CharacterDetailsView: View {
     @ObservedObject var viewModel: CharacterDetailsViewModel
-
+    private var charaterModel: CharacterUIModel {
+        viewModel.character
+    }
     
     var body: some View {
         VStack {
-            Text("Ttile")
+            Text(charaterModel.character.name)
                 .font(.largeTitle)
-            AsyncImage(url: URL(string: "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg")!)
+                .fontWeight(.bold)
+            AsyncImage(url: charaterModel.imageURL)
             { image in
                 image
                     .resizable()
@@ -32,15 +35,21 @@ struct CharacterDetailsView: View {
             
             List {
                 Section(header: Text("Info")) {
-                    infoRow(emoj: "🥸", title: "Nickaame", value: "19-9-20")
-                    infoRow(emoj: "🎂", title: "BirthDay", value: "19-9-20")
-                    infoRow(emoj: "🤔", title: "Status", value: "19-9-20")
-                    infoRow(emoj: "🎥", title: "Portrayed", value: "19-9-20")
+                    infoRow(emoj: "🥸",
+                            title: "Nickaame",
+                            value: charaterModel.character.nickname)
+                    infoRow(emoj: "🎂",
+                            title:"BirthDay",
+                            value: charaterModel.character.birthday)
+                    infoRow(emoj: "🤔",
+                            title: "Status",
+                            value: charaterModel.character.status.rawValue)
+                    infoRow(emoj: "🎥",
+                            title: "Portrayed",
+                            value: charaterModel.character.portrayed)
                 }
             }
-            //
         }
-        .navigationTitle("title")
     }
 }
 

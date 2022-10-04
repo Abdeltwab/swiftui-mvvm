@@ -35,6 +35,7 @@ private func buildContainer() -> Container {
     container.register(CharactersService.self) { _ in
         CharactersService()
     }
+    .inObjectScope(.container)
 
     container.register(FetchCharacters.self) { resolver in
         FetchCharacters(
@@ -43,6 +44,7 @@ private func buildContainer() -> Container {
                 CharactersService()
         )
     }
+    .inObjectScope(.container)
     
     container.register(CharacterListViewModel.self) { resolver in
         CharacterListViewModel(
@@ -50,10 +52,11 @@ private func buildContainer() -> Container {
                 FetchCharacters.self)!
         )
     }
+    .inObjectScope(.container)
     
 //    container.register(CharacterDetailsViewModel.self) { resolver in
-//        CharacterDetailsViewModel(character: <#T##CharacterUIModel#>)
+//        CharacterDetailsViewModel(character: resolver.s)
 //    }
-    
+//    
     return container
 }
