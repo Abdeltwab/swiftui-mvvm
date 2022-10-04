@@ -42,9 +42,7 @@ private func buildContainer() -> Container {
                 CharactersService()
         )
     }
-
-    //    container // FetchCharacters
-
+    
     container.register(CharacterListViewModel.self) { resolver in
         CharacterListViewModel(
             fetchCharacters:resolver.resolve(
