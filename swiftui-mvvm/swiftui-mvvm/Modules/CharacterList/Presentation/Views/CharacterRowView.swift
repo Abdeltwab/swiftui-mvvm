@@ -8,27 +8,34 @@
 import SwiftUI
 
 struct CharacterRowView: View {
-    var body: some View {
-        VStack( spacing: 12) {
-            AsyncImage(url:
-                URL(string: "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg")!
-            ) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .clipped()
-            } placeholder: {
-                ProgressView()
-            }
-            .cornerRadius(12)
+    private let item: CharacterUIModel
 
-            Text("This is the Title")
+    init(_ item: CharacterUIModel) {
+        self.item = item
+    }
+
+    var body: some View {
+        VStack(spacing: 12) {
+            AsyncImage(
+                url: item.imageURL,
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .clipped()
+                },
+                placeholder: {
+                    ProgressView()
+                })
+                .cornerRadius(12)
+
+            Text(item.character.name)
         }
     }
 }
 
-struct CharacterRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterRowView()
-    }
-}
+// struct CharacterRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterRowView(CharacterUIModel(character: Character())
+//    }
+// }

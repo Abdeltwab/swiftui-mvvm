@@ -12,12 +12,15 @@ struct CharacterListView: View {
     @ObservedObject private var viewModel = Resolver.shared.resolve(CharacterListViewModel.self)
 
     var body: some View {
-        List($viewModel.filteredList) { item in
-            CharacterRowView()
-            
+        NavigationView {
+            List($viewModel.filteredList) {
+                CharacterRowView($0.wrappedValue)
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Breaking Bad")
+            .searchable(text: $viewModel.searchText)
         }
-        .listStyle(PlainListStyle())
-        .navigationTitle("Breaking Bad")
+        
     }
 }
 
