@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 class CharacterListViewModel: ObservableObject {
-    @Published var filteredCharacters: [CharacterUIModel] = []
+    @Published var filteredList: [CharacterUIModel] = []
     @Published var searchText = ""
 
     @Published private var charactersList: [CharacterUIModel] = []
@@ -33,7 +33,7 @@ private extension CharacterListViewModel {
             .map(filterCharactersList)
             .sink { [weak self] characters in
                 guard let self = self else { return }
-                self.filteredCharacters = characters
+                self.filteredList = characters
             }
             .store(in: &cancellables)
     }
