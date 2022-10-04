@@ -9,9 +9,9 @@ import Combine
 import NetworkingKit
 
 struct FetchCharacters {
-    private let service: CharactersService
+    private let service: CharactersServiceProtocol
 
-    init(service: CharactersService) {
+    init(service: CharactersServiceProtocol) {
         self.service = service
     }
 
