@@ -22,6 +22,22 @@ class CharacterListViewModel: ObservableObject {
         subscribeToSearchTextChange()
         getCharactersList()
     }
+    
+    func getCharactersList() {
+        fetchCharactersUseCase
+            .execute()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case let .failure(error):
+                    print(error)
+                case .finished:
+                    print("finished")
+                }
+            }, receiveValue: { [weak self] value in
+                guard let self = self else { return }
+                self.charactersList = value
+            }).store(in: &cancellables)
+    }
 }
 
 private extension CharacterListViewModel {
@@ -47,19 +63,5 @@ private extension CharacterListViewModel {
         }
     }
 
-    func getCharactersList() {
-        fetchCharactersUseCase
-            .execute()
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case let .failure(error):
-                    print(error)
-                case .finished:
-                    print("finished")
-                }
-            }, receiveValue: { [weak self] value in
-                guard let self = self else { return }
-                self.charactersList = value
-            }).store(in: &cancellables)
-    }
+    
 }
