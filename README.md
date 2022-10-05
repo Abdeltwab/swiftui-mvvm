@@ -36,6 +36,13 @@ https://drive.google.com/drive/folders/1ZJGZuC5u_R_3enTg9Fe6u8P3e0PPZeX0?usp=sha
  - resolve package versions
  - run the app on a simulator or phone
 
+# Installation TroubleShoting 
+
+if app did not compile due to packages not resolved try below steps :
+ - remove refernece of NetworkingKit package 
+ - add it again 
+ - connect it to the project from `Target - > under General tab -> Frameworks , Libraries and Embedded Content -> plus icon`
+
 # App Structure
  
 ### NetworkingKit (Data Layer):
