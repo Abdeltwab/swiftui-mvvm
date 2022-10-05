@@ -4,6 +4,7 @@
 //
 //  Created by Abdeltawab Mohamed on 05/10/2022.
 //
+//Credites: https://quickbirdstudios.com/blog/coordinator-pattern-in-swiftui/
 
 import SwiftUI
 
