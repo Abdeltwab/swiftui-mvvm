@@ -10,6 +10,7 @@
 		4F0AF03D28ED51C500D2A6B3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AF03C28ED51C500D2A6B3 /* AppCoordinator.swift */; };
 		4F0AF04128ED936800D2A6B3 /* CharacterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AF04028ED936800D2A6B3 /* CharacterListCoordinator.swift */; };
 		4F0AF04328ED946400D2A6B3 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AF04228ED946400D2A6B3 /* View+.swift */; };
+		4F0AF04728EDB40B00D2A6B3 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F0AF04628EDB40B00D2A6B3 /* CachedAsyncImage */; };
 		4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92941728EB506B00CD5758 /* swiftui_mvvmApp.swift */; };
 		4F92941C28EB506D00CD5758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92941B28EB506D00CD5758 /* Assets.xcassets */; };
 		4F92941F28EB506D00CD5758 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92941E28EB506D00CD5758 /* Preview Assets.xcassets */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0AF04728EDB40B00D2A6B3 /* CachedAsyncImage in Frameworks */,
 				4F92944628EB556300CD5758 /* NetworkingKit in Frameworks */,
 				4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */,
 			);
@@ -280,6 +282,7 @@
 			packageProductDependencies = (
 				4F92944528EB556300CD5758 /* NetworkingKit */,
 				4F92944B28EB7CB000CD5758 /* Swinject */,
+				4F0AF04628EDB40B00D2A6B3 /* CachedAsyncImage */,
 			);
 			productName = "swiftui-mvvm";
 			productReference = 4F92941428EB506B00CD5758 /* swiftui-mvvm.app */;
@@ -333,6 +336,7 @@
 			mainGroup = 4F92940B28EB506B00CD5758;
 			packageReferences = (
 				4F92944A28EB7CB000CD5758 /* XCRemoteSwiftPackageReference "Swinject" */,
+				4F0AF04528EDB40B00D2A6B3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4F92941528EB506B00CD5758 /* Products */;
 			projectDirPath = "";
@@ -647,6 +651,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4F0AF04528EDB40B00D2A6B3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		4F92944A28EB7CB000CD5758 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -658,6 +670,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4F0AF04628EDB40B00D2A6B3 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F0AF04528EDB40B00D2A6B3 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
 		4F92944528EB556300CD5758 /* NetworkingKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkingKit;

@@ -5,6 +5,7 @@
 //  Created by Abdeltawab Mohamed on 03/10/2022.
 //
 
+import CachedAsyncImage
 import SwiftUI
 
 struct CharacterRowView: View {
@@ -20,7 +21,7 @@ struct CharacterRowView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            AsyncImage(
+            CachedAsyncImage(
                 url: imageURL,
                 content: { image in
                     image
