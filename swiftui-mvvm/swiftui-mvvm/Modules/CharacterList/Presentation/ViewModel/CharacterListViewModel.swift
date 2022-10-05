@@ -17,14 +17,14 @@ class CharacterListViewModel: ObservableObject, Navigable {
     @Published var selectedCharacter: CharacterUIModel? = nil
     @Published var searchText = ""
 
-    @Published private var charactersList: [CharacterUIModel] = []
+    @Published var charactersList: [CharacterUIModel] = []
     private var cancellables: Set<AnyCancellable> = []
     private let fetchCharactersUseCase: FetchCharacters
     let coordinator: CharacterListCoordinator?
 
     
     init(fetchCharacters: FetchCharacters ,
-         coordinator: CharacterListCoordinator) {
+         coordinator: CharacterListCoordinator? = nil) {
         fetchCharactersUseCase = fetchCharacters
         self.coordinator = coordinator
         subscribeToSearchTextChange()

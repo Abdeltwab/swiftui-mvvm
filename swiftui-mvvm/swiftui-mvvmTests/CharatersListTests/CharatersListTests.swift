@@ -41,10 +41,10 @@ class CharatersListTests: XCTestCase {
     }
     
     func test_emptyFilterdList() {
-        let list = sut.getCharactersList()
-        print(list)
-//        sut.searchText = "jsess"
-//        XCTAssertEqual(sut.filteredList.count, 5)
+        sut.getCharactersList()
+        sut.searchText = "jsess"
+        print(sut.charactersList)
+        XCTAssertEqual(sut.charactersList.count, 5)
 //        sut.filteredList.count
 //        let expectation = XCTestExpectation(description: "searchResults")
 //        sut.$searchText
