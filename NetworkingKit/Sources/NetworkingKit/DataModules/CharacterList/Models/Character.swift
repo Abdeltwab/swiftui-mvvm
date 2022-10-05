@@ -9,7 +9,7 @@ import Foundation
 
 public typealias CharacterList = [Character]
 
-public struct Character: Codable {
+public struct Character: Codable , Equatable {
     public let id: Int
     public let name: String
     public let birthday: String
