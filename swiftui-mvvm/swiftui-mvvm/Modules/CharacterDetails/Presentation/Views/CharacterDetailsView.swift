@@ -10,16 +10,16 @@ import SwiftUI
 struct CharacterDetailsView: View {
     @ObservedObject var viewModel = Resolver.shared.resolve(CharacterDetailsViewModel.self)
     
-    private var charaterModel: CharacterUIModel {
+    private var characterModel: CharacterUIModel {
         viewModel.character
     }
 
     var body: some View {
         VStack {
-            Text(charaterModel.character.name)
+            Text(characterModel.character.name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            AsyncImage(url: charaterModel.imageURL)
+            AsyncImage(url: characterModel.imageURL)
             { image in
                 image
                     .resizable()
@@ -38,16 +38,16 @@ struct CharacterDetailsView: View {
                 Section(header: Text("Info")) {
                     infoRow(emoj: "🥸",
                             title: "Nickaame",
-                            value: charaterModel.character.nickname)
+                            value: characterModel.character.nickname)
                     infoRow(emoj: "🎂",
                             title:"BirthDay",
-                            value: charaterModel.character.birthday)
+                            value: characterModel.character.birthday)
                     infoRow(emoj: "🤔",
                             title: "Status",
-                            value: charaterModel.character.status.rawValue)
+                            value: characterModel.character.status.rawValue)
                     infoRow(emoj: "🎥",
                             title: "Portrayed",
-                            value: charaterModel.character.portrayed)
+                            value: characterModel.character.portrayed)
                 }
             }
         }
