@@ -33,8 +33,8 @@ class CharactersListViewModel: ObservableObject, Navigable {
         fetchCharactersList()
     }
     
-    func open(route: Destination) {
-        switch route {
+    func navigateTo(_ destaintion: Destination) {
+        switch destaintion {
         case .characterDetails(let characterUIModel):
              coordinator?.characterDetails(characterUIModel)
         }
@@ -49,7 +49,7 @@ private extension CharactersListViewModel {
             .compactMap{ $0}
             .sink{ [weak self] character in
                 guard let self = self else { return }
-                self.open(route: .characterDetails(character))
+                self.navigateTo(.characterDetails(character))
             }
             .store(in: &cancellables)
         

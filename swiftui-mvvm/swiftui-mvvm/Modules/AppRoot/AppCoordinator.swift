@@ -11,7 +11,7 @@ import NetworkingKit
 
 protocol Navigable {
     associatedtype NavigationItem: Equatable
-    func open(route :NavigationItem)
+    func navigateTo(_ destaintion :NavigationItem)
 }
 
 class AppCoordinator: ObservableObject{
