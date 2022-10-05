@@ -4,15 +4,16 @@
 //
 //  Created by Abdeltawab Mohamed on 04/10/2022.
 //
-//https://felarmir.com/post/14_clean_mvvm/
+
 import SwiftUI
 
 struct CharacterDetailsView: View {
-    @ObservedObject var viewModel: CharacterDetailsViewModel
+    @ObservedObject var viewModel = Resolver.shared.resolve(CharacterDetailsViewModel.self)
+    
     private var charaterModel: CharacterUIModel {
         viewModel.character
     }
-    
+
     var body: some View {
         VStack {
             Text(charaterModel.character.name)
