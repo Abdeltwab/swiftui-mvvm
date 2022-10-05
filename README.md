@@ -1,4 +1,25 @@
-# General Information
+# Demo 
+
+## Video
+
+https://drive.google.com/drive/folders/1ZJGZuC5u_R_3enTg9Fe6u8P3e0PPZeX0?usp=sharing
+
+## Screen Shots
+
+<table>
+  <tr>
+    <td> Main </td>
+    <td> Search </td>
+    <td> Details </td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/16858825/194073018-1be49aaa-4432-4226-89a4-2e215333b832.png" width=250 height=520></td>
+    <td><img src="https://user-images.githubusercontent.com/16858825/194072994-f83d27f2-7e90-405d-9abb-1beca6d6f874.png" width=250 height=520></td>
+    <td><img src="https://user-images.githubusercontent.com/16858825/194072952-8746afaa-63b7-4890-8cfc-26e53ce063f8.png" width=250 height=520></td>
+  </tr>
+ </table>
+
+# OverView
  
  - Minimum  Deployment target : `iOS 15.0` 
  - iOS   target : `iOS 15.0` 
