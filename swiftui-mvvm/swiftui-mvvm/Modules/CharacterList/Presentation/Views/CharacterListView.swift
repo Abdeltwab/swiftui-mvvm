@@ -15,14 +15,14 @@ struct CharacterListView: View {
     }
     
     var body: some View {
-            List($viewModel.filteredList) { item in
-                CharacterRowView(item.wrappedValue)
-                    .onTapGesture {
-                        viewModel.open(route: .charList(item.wrappedValue))
-                    }
-            }
-            .listStyle(PlainListStyle())
-            .navigationTitle("Breaking Bad")
-            .searchable(text: $viewModel.searchText)
+        List($viewModel.filteredList) { item in
+            CharacterRowView(item.wrappedValue)
+                .onTapGesture {
+                    viewModel.selectedCharacter = item.wrappedValue
+                }
+        }
+        .listStyle(PlainListStyle())
+        .navigationTitle("Breaking Bad")
+        .searchable(text: $viewModel.searchText)
     }
 }

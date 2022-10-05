@@ -9,40 +9,53 @@ import Combine
 import Foundation
 
 class CharacterListViewModel: ObservableObject, Navigable {
+    
     enum Destination: Equatable{
-        case charList(CharacterUIModel)
+        case characterDetails(CharacterUIModel)
     }
-        
+    
     @Published var filteredList: [CharacterUIModel] = []
     @Published var selectedCharacter: CharacterUIModel? = nil
+    @Published  var charactersList: [CharacterUIModel] = []
     @Published var searchText = ""
-
-    @Published var charactersList: [CharacterUIModel] = []
+    let coordinator: CharacterListCoordinator?
+        
     private var cancellables: Set<AnyCancellable> = []
     private let fetchCharactersUseCase: FetchCharacters
-    let coordinator: CharacterListCoordinator?
 
     
     init(fetchCharacters: FetchCharacters ,
          coordinator: CharacterListCoordinator? = nil) {
         fetchCharactersUseCase = fetchCharacters
         self.coordinator = coordinator
+        subscribeToCharacterSelection()
         subscribeToSearchTextChange()
-        getCharactersList()
+        fetchCharactersList()
     }
-    
     
     func open(route: Destination) {
         switch route {
-        case .charList(let characterUIModel):
+        case .characterDetails(let characterUIModel):
              coordinator?.characterDetails(characterUIModel)
         }
     }
+
 }
 
 private extension CharacterListViewModel {
     
-    func getCharactersList() {
+    func subscribeToCharacterSelection(){
+        $selectedCharacter
+            .compactMap{ $0}
+            .sink{ [weak self] character in
+                guard let self = self else { return }
+                self.open(route: .characterDetails(character))
+            }
+            .store(in: &cancellables)
+        
+    }
+    
+    func fetchCharactersList() {
         fetchCharactersUseCase
             .execute()
             .sink(receiveCompletion: { completion in
@@ -58,7 +71,6 @@ private extension CharacterListViewModel {
             }).store(in: &cancellables)
     }
     
-    
     func subscribeToSearchTextChange() {
         $searchText
             .combineLatest($charactersList)
@@ -71,7 +83,7 @@ private extension CharacterListViewModel {
             }
             .store(in: &cancellables)
     }
-
+    
     func filterCharactersList(text: String,
                               list: [CharacterUIModel]) -> [CharacterUIModel] {
         text.isEmpty ?
@@ -79,6 +91,4 @@ private extension CharacterListViewModel {
             $0.character.name.localizedCaseInsensitiveContains(text)
         }
     }
-
-    
 }
