@@ -8,20 +8,11 @@
 import Combine
 import Foundation
 
-
-
 class CharacterListViewModel: ObservableObject, Navigable {
     enum Destination: Equatable{
         case charList(CharacterUIModel)
     }
         
-    func open(route: Destination) {
-        switch route {
-        case .charList(let characterUIModel):
-            coordinator?.openCharacterDetailsVM(characterUIModel)
-        }
-    }
-    
     @Published var filteredList: [CharacterUIModel] = []
     @Published var selectedCharacter: CharacterUIModel? = nil
     @Published var searchText = ""
@@ -29,16 +20,25 @@ class CharacterListViewModel: ObservableObject, Navigable {
     @Published private var charactersList: [CharacterUIModel] = []
     private var cancellables: Set<AnyCancellable> = []
     private let fetchCharactersUseCase: FetchCharacters
-    let coordinator: AppCoordinatorObject?
+    let coordinator: CharacterListCoordinator?
 
     
     init(fetchCharacters: FetchCharacters ,
-         coordinator: AppCoordinatorObject) {
+         coordinator: CharacterListCoordinator) {
         fetchCharactersUseCase = fetchCharacters
         self.coordinator = coordinator
         subscribeToSearchTextChange()
         getCharactersList()
     }
+    
+    
+    func open(route: Destination) {
+        switch route {
+        case .charList(let characterUIModel):
+             coordinator?.characterDetails(characterUIModel)
+        }
+    }
+    
     
     func getCharactersList() {
         fetchCharactersUseCase

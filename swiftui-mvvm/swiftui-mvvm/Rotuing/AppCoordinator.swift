@@ -16,18 +16,25 @@ protocol Navigable {
 
 
 class AppCoordinatorObject: ObservableObject{
+    @Published var charactersListCoordinator: CharacterListCoordinator?
+
     @Published var charactersListVM: CharacterListViewModel?
     @Published var characterDetailsVM: CharacterDetailsViewModel?
     
      init() {
-        let fetchCharsUseCase = FetchCharacters(service: CharactersService())
-         charactersListVM = CharacterListViewModel(fetchCharacters: fetchCharsUseCase,
-                                                   coordinator: self)
+         charactersListCoordinator = CharacterListCoordinator()
     }
 
 }
 
-//MARK: - CharacterDetailsViewModel
+struct AppCoordinatorView: View {
+    @ObservedObject var coordinatorObject: AppCoordinatorObject
+
+    var body: some View {
+        CharacterListCoordinatorView(coordinatorObject: coordinatorObject.charactersListCoordinator!)
+    }
+}
+
 
 extension AppCoordinatorObject {
 
@@ -37,8 +44,32 @@ extension AppCoordinatorObject {
 }
 
 
-struct AppCoordinatorView: View {
-    @ObservedObject var coordinatorObject: AppCoordinatorObject
+
+//MARK: - CharacterDetailsViewModel
+
+
+class CharacterListCoordinator: ObservableObject {
+    
+    @Published var charactersListVM: CharacterListViewModel?
+    @Published var characterDetailsVM: CharacterDetailsViewModel?
+
+    init() {
+        let fetchCharsUseCase = FetchCharacters(service: CharactersService())
+        charactersListVM = CharacterListViewModel(fetchCharacters: fetchCharsUseCase,
+                                                  coordinator: self)
+        
+   }
+    
+  
+    func characterDetails(_ character: CharacterUIModel) {
+        characterDetailsVM = CharacterDetailsViewModel(character: character)
+    }
+
+}
+
+struct CharacterListCoordinatorView: View {
+    
+    @ObservedObject var coordinatorObject: CharacterListCoordinator
 
     var body: some View {
         NavigationView {
@@ -48,6 +79,7 @@ struct AppCoordinatorView: View {
                 }
         }
     }
+    
 }
 
 
