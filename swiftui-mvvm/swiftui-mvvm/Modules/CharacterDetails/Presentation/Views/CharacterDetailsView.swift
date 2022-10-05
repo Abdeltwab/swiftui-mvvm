@@ -66,10 +66,4 @@ extension CharacterDetailsView {
             Text(value)
         }
     }
-    
 }
-//struct CharacterDetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterDetailsView()
-//    }
-//}
