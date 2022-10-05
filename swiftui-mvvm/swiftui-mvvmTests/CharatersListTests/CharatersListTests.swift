@@ -19,7 +19,7 @@ class CharatersListTests: XCTestCase {
         sut = CharactersListViewModel(fetchCharacters: FetchCharacters(service: MockCharactersService()))
     }
     
-    func test_intial_State() {
+    func test_initial_State() {
         XCTAssertEqual(sut.charactersList.count, 5)
         XCTAssertEqual(sut.filteredList.count, 0)
     }
