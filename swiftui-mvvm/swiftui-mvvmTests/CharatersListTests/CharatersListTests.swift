@@ -41,21 +41,10 @@ class CharatersListTests: XCTestCase {
     }
     
     func test_emptyFilterdList() {
-        sut.getCharactersList()
         sut.searchText = "jsess"
         print("sut.charactersList.count")
         print(sut.charactersList.count)
         XCTAssertEqual(sut.charactersList.count, 5)
-//        sut.filteredList.count
-//        let expectation = XCTestExpectation(description: "searchResults")
-//        sut.$searchText
-//            .sink(receiveValue: { places in
-//                if places.count == 4 {
-//                    expectation.fulfill()
-//                }
-//            })
-//            .store(in: &cancellables)
-//        wait(for: [expectation], timeout: 2)
     }
 
     override func tearDown() {

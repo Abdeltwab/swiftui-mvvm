@@ -29,9 +29,20 @@ class Resolver {
     }
 }
 
+
 private func buildContainer() -> Container {
     let container = Container()
 
+    container.register(AppCoordinator.self) { _ in
+        AppCoordinator()
+    }
+    .inObjectScope(.container)
+    
+    container.register(CharacterListCoordinator.self) { _ in
+        CharacterListCoordinator()
+    }
+    .inObjectScope(.container)
+    
     container.register(CharactersService.self) { _ in
         CharactersService()
     }
@@ -61,3 +72,4 @@ private func buildContainer() -> Container {
     
     return container
 }
+

@@ -11,7 +11,7 @@ import SwiftUI
 struct swiftui_mvvmApp: App {
     var body: some Scene {
         WindowGroup {
-            AppCoordinatorView(coordinatorObject: AppCoordinator())
+            AppCoordinatorView(appCoordinator: Resolver.shared.resolve(AppCoordinator.self))
         }
     }
 }

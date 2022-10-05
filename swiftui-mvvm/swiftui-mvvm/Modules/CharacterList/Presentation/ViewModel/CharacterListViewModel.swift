@@ -38,7 +38,9 @@ class CharacterListViewModel: ObservableObject, Navigable {
              coordinator?.characterDetails(characterUIModel)
         }
     }
-    
+}
+
+private extension CharacterListViewModel {
     
     func getCharactersList() {
         fetchCharactersUseCase
@@ -55,9 +57,7 @@ class CharacterListViewModel: ObservableObject, Navigable {
                 self.charactersList = value
             }).store(in: &cancellables)
     }
-}
-
-private extension CharacterListViewModel {
+    
     
     func subscribeToSearchTextChange() {
         $searchText
