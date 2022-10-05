@@ -9,6 +9,8 @@
 import SwiftUI
 import NetworkingKit
 
+
+
 protocol Navigable {
     associatedtype NavigationItem: Equatable
     func open(route :NavigationItem)
