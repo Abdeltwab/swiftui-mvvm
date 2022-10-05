@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-
 struct CharacterListView: View {
     @ObservedObject private var viewModel = Resolver.shared.resolve(CharacterListViewModel.self)
-    init(viewModel:CharacterListViewModel ) {
+    init(viewModel: CharacterListViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
         List($viewModel.filteredList) { item in
-            CharacterRowView(item.wrappedValue)
+            let wrappedItem = item.wrappedValue
+            CharacterRowView(name: wrappedItem.character.name,
+                             imageURL: wrappedItem.imageURL)
                 .onTapGesture {
-                    viewModel.selectedCharacter = item.wrappedValue
+                    viewModel.selectedCharacter = wrappedItem
                 }
         }
         .listStyle(PlainListStyle())

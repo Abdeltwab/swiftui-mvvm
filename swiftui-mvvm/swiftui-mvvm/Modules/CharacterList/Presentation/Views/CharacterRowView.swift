@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct CharacterRowView: View {
-    private let item: CharacterUIModel
-    
-    init(_ item: CharacterUIModel) {
-        self.item = item
+    private let name: String
+    private let imageURL: URL
+
+    init(name: String,
+         imageURL: URL)
+    {
+        self.name = name
+        self.imageURL = imageURL
     }
-    
+
     var body: some View {
         VStack(spacing: 12) {
             AsyncImage(
-                url: item.imageURL,
+                url: imageURL,
                 content: { image in
                     image
                         .resizable()
@@ -27,9 +31,9 @@ struct CharacterRowView: View {
                 placeholder: {
                     ProgressView()
                 })
-            .cornerRadius(12)
-            
-            Text(item.character.name)
+                .cornerRadius(12)
+
+            Text(name)
         }
     }
 }
