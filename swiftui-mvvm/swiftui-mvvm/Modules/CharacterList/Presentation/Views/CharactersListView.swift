@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterListView: View {
+struct CharactersListView: View {
     @ObservedObject private var viewModel = Resolver.shared.resolve(CharactersListViewModel.self)
     init(viewModel: CharactersListViewModel) {
         self.viewModel = viewModel

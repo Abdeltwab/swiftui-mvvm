@@ -31,7 +31,7 @@ struct CharacterListCoordinatorView: View {
 
     var body: some View {
         NavigationView {
-            CharacterListView(viewModel: coordinator.charactersListVM!)
+            CharactersListView(viewModel: coordinator.charactersListVM!)
                 .navigation(item: $coordinator.characterDetailsVM) {
                     CharacterDetailsView(viewModel: $0)
                 }

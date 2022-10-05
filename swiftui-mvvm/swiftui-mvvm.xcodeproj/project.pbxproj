@@ -17,7 +17,7 @@
 		4F92944928EB7C3E00CD5758 /* DependancyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92944828EB7C3E00CD5758 /* DependancyInjector.swift */; };
 		4F92944C28EB7CB000CD5758 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4F92944B28EB7CB000CD5758 /* Swinject */; };
 		4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945328EB851400CD5758 /* CharacterRowView.swift */; };
-		4F92945628EB86B900CD5758 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945528EB86B900CD5758 /* CharacterListView.swift */; };
+		4F92945628EB86B900CD5758 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945528EB86B900CD5758 /* CharactersListView.swift */; };
 		4F92945828EB8F8200CD5758 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945728EB8F8200CD5758 /* CharactersListViewModel.swift */; };
 		4F92945D28EB98EB00CD5758 /* FetchCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */; };
 		4F92946128EB9ECB00CD5758 /* CharacterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */; };
@@ -48,7 +48,7 @@
 		4F92944328EB528000CD5758 /* NetworkingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkingKit; path = ../NetworkingKit; sourceTree = "<group>"; };
 		4F92944828EB7C3E00CD5758 /* DependancyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependancyInjector.swift; sourceTree = "<group>"; };
 		4F92945328EB851400CD5758 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
-		4F92945528EB86B900CD5758 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		4F92945528EB86B900CD5758 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		4F92945728EB8F8200CD5758 /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		4F92945C28EB98EB00CD5758 /* FetchCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacters.swift; sourceTree = "<group>"; };
 		4F92946028EB9ECB00CD5758 /* CharacterUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUIModel.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		4F92944F28EB7ED000CD5758 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F92945528EB86B900CD5758 /* CharacterListView.swift */,
+				4F92945528EB86B900CD5758 /* CharactersListView.swift */,
 				4F92945328EB851400CD5758 /* CharacterRowView.swift */,
 			);
 			path = Views;
@@ -372,7 +372,7 @@
 				4F92945428EB851400CD5758 /* CharacterRowView.swift in Sources */,
 				4F92945D28EB98EB00CD5758 /* FetchCharacters.swift in Sources */,
 				4FDD1EC528EC33EB001B95DF /* CharacterDetailsViewModel.swift in Sources */,
-				4F92945628EB86B900CD5758 /* CharacterListView.swift in Sources */,
+				4F92945628EB86B900CD5758 /* CharactersListView.swift in Sources */,
 				4F0AF04128ED936800D2A6B3 /* CharacterListCoordinator.swift in Sources */,
 				4F92941828EB506B00CD5758 /* swiftui_mvvmApp.swift in Sources */,
 				4F0AF04328ED946400D2A6B3 /* View+.swift in Sources */,
