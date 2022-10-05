@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class CharacterListViewModel: ObservableObject, Navigable {
+class CharactersListViewModel: ObservableObject, Navigable {
     
     enum Destination: Equatable{
         case characterDetails(CharacterUIModel)
@@ -42,7 +42,7 @@ class CharacterListViewModel: ObservableObject, Navigable {
 
 }
 
-private extension CharacterListViewModel {
+private extension CharactersListViewModel {
     
     func subscribeToCharacterSelection(){
         $selectedCharacter

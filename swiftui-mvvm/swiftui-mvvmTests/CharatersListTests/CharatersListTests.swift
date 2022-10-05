@@ -13,10 +13,10 @@ import XCTest
 class CharatersListTests: XCTestCase {
     private var cancellables = Set<AnyCancellable>()
     private let fetchCharacters = FetchCharacters(service: MockCharactersService())
-    private var sut: CharacterListViewModel!
+    private var sut: CharactersListViewModel!
 
     override func setUp()  {
-        sut = CharacterListViewModel(fetchCharacters: FetchCharacters(service: MockCharactersService()))
+        sut = CharactersListViewModel(fetchCharacters: FetchCharacters(service: MockCharactersService()))
     }
     
     func test_intial_State() {

@@ -57,8 +57,8 @@ private func buildContainer() -> Container {
     }
     .inObjectScope(.container)
 
-    container.register(CharacterListViewModel.self) { resolver in
-        CharacterListViewModel(
+    container.register(CharactersListViewModel.self) { resolver in
+        CharactersListViewModel(
             fetchCharacters:resolver.resolve(
                 FetchCharacters.self)!
         )

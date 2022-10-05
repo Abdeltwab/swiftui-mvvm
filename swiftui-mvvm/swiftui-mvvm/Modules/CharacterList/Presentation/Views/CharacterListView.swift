@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    @ObservedObject private var viewModel = Resolver.shared.resolve(CharacterListViewModel.self)
-    init(viewModel: CharacterListViewModel) {
+    @ObservedObject private var viewModel = Resolver.shared.resolve(CharactersListViewModel.self)
+    init(viewModel: CharactersListViewModel) {
         self.viewModel = viewModel
     }
 

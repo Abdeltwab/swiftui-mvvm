@@ -10,12 +10,12 @@ import  NetworkingKit
 
 class CharacterListCoordinator: ObservableObject {
     
-    @Published var charactersListVM: CharacterListViewModel?
+    @Published var charactersListVM: CharactersListViewModel?
     @Published var characterDetailsVM: CharacterDetailsViewModel?
 
     init() {
         let fetchCharsUseCase = FetchCharacters(service: CharactersService())
-        charactersListVM = CharacterListViewModel(fetchCharacters: fetchCharsUseCase,
+        charactersListVM = CharactersListViewModel(fetchCharacters: fetchCharsUseCase,
                                                   coordinator: self)
    }
     
