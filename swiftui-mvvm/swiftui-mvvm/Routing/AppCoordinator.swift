@@ -3,19 +3,19 @@
 //  swiftui-mvvm
 //
 //  Created by Abdeltawab Mohamed on 05/10/2022.
-//
+
+//Credites: https://quickbirdstudios.com/blog/coordinator-pattern-in-swiftui/
 
 import SwiftUI
 import NetworkingKit
 
 protocol Navigable {
     associatedtype NavigationItem: Equatable
-
     func open(route :NavigationItem)
 }
 
 
-class AppCoordinatorObject: ObservableObject{
+class AppCoordinator: ObservableObject{
     @Published var charactersListCoordinator: CharacterListCoordinator?
 
     @Published var charactersListVM: CharacterListViewModel?
@@ -28,24 +28,13 @@ class AppCoordinatorObject: ObservableObject{
 }
 
 struct AppCoordinatorView: View {
-    @ObservedObject var coordinatorObject: AppCoordinatorObject
+    @ObservedObject var coordinatorObject: AppCoordinator
 
     var body: some View {
         CharacterListCoordinatorView(coordinatorObject: coordinatorObject.charactersListCoordinator!)
     }
 }
 
-
-extension AppCoordinatorObject {
-
-    func openCharacterDetailsVM(_ character: CharacterUIModel) {
-        characterDetailsVM = CharacterDetailsViewModel (character: character)
-    }
-}
-
-
-
-//MARK: - CharacterDetailsViewModel
 
 
 class CharacterListCoordinator: ObservableObject {
@@ -83,7 +72,7 @@ struct CharacterListCoordinatorView: View {
 }
 
 
-
+// Helper
 extension View {
 
     func onNavigation(_ action: @escaping () -> Void) -> some View {

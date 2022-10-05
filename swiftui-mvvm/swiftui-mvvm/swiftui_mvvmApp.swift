@@ -11,8 +11,7 @@ import SwiftUI
 struct swiftui_mvvmApp: App {
     var body: some Scene {
         WindowGroup {
-            AppCoordinatorView(coordinatorObject: AppCoordinatorObject())
-          //  CharacterListView()
+            AppCoordinatorView(coordinatorObject: AppCoordinator())
         }
     }
 }

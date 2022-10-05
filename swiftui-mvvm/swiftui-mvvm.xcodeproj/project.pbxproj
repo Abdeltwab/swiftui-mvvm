@@ -75,12 +75,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F0AF03B28ED518C00D2A6B3 /* Rotuing */ = {
+		4F0AF03B28ED518C00D2A6B3 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
 				4F0AF03C28ED51C500D2A6B3 /* AppCoordinator.swift */,
 			);
-			path = Rotuing;
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		4F92940B28EB506B00CD5758 = {
@@ -106,7 +106,7 @@
 		4F92941628EB506B00CD5758 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				4F0AF03B28ED518C00D2A6B3 /* Rotuing */,
+				4F0AF03B28ED518C00D2A6B3 /* Routing */,
 				4F92944D28EB7E1700CD5758 /* Modules */,
 				4F92944728EB7C2300CD5758 /* Helpers */,
 				4F92941728EB506B00CD5758 /* swiftui_mvvmApp.swift */,
