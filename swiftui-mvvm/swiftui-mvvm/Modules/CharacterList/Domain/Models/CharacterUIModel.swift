@@ -8,7 +8,7 @@
 import NetworkingKit
 import Foundation
 
-struct CharacterUIModel: Identifiable{
+struct CharacterUIModel: Identifiable, Equatable{
     let character: Character
     
     var id: Int {
