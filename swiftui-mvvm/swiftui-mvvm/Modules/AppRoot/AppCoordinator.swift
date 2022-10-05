@@ -29,5 +29,3 @@ struct AppCoordinatorView: View {
         CharacterListCoordinatorView(coordinator: appCoordinator.characterListCoordinator!)
     }
 }
-
-// Helper
